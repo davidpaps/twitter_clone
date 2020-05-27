@@ -32,27 +32,27 @@ app.post("/tweets", async (req, res) => {
     "INSERT INTO tweets (description) VALUES($1) RETURNING *",
     [description]
   );
-  res.json(newTodo.rows[0]);
+  res.json(newTweet.rows[0]);
 });
 
-app.put("/tweets/:id", async (req, res) => {
-  const { id } = req.params;
-  const { description } = req.body;
-  const updateTweet = await pool.query(
-    "UPDATE tweets SET description = $1 WHERE tweet_id = $2",
-    [description, id]
-  );
-  res.json("Tweet was updated!");
-});
+// app.put("/tweets/:id", async (req, res) => {
+//   const { id } = req.params;
+//   const { description } = req.body;
+//   const updateTweet = await pool.query(
+//     "UPDATE tweets SET description = $1 WHERE tweet_id = $2",
+//     [description, id]
+//   );
+//   res.json("Tweet was updated!");
+// });
 
-app.delete("/tweets/:id", async (req, res) => {
-  const { id } = req.params;
-  const deleteTweet = await pool.query(
-    "DELETE FROM tweets WHERE tweet_id = $1",
-    [id]
-  );
-  res.json("Tweet was deleted!");
-});
+// app.delete("/tweets/:id", async (req, res) => {
+//   const { id } = req.params;
+//   const deleteTweet = await pool.query(
+//     "DELETE FROM tweets WHERE tweet_id = $1",
+//     [id]
+//   );
+//   res.json("Tweet was deleted!");
+// });
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
