@@ -1,13 +1,13 @@
 import React from "react";
 import { shallow } from "enzyme";
-import SignIn from "./signIn";
+import AddTweet from "./addTweet";
 
-describe("Sign In", () => {
+describe("Add Tweet", () => {
   let wrapper;
 
-  beforeEach(() => (wrapper = shallow(<SignIn />)));
+  beforeEach(() => (wrapper = shallow(<AddTweet />)));
 
-  it("should render a <Fragment />", () => {
+  it("should render a <div />", () => {
     expect(wrapper.find("Fragment").length).toEqual(1);
   });
 
@@ -15,7 +15,7 @@ describe("Sign In", () => {
     expect(wrapper.find("form").length).toEqual(1);
   });
 
-  it("should render a <button/>", () => {
+  it("should render a <button />", () => {
     expect(wrapper.find("button").length).toEqual(1);
   });
 });

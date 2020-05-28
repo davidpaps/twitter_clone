@@ -4,12 +4,11 @@ const SignIn = () => {
   return (
     <Fragment>
       <h1 className="text-center mt-5">Welcome to Twitter</h1>
-      <form>
-        <input type="email" className="" />
-        <input type="password" className="" />
-        <button>Sign In</button>
+      <form className="d-flex mt-5">
+        <input className="form-control" type="email" />
+        <input className="form-control" type="password" />
+        <button className="btn btn-success">Sign In</button>
       </form>
-      <div className="container" />
     </Fragment>
   );
 };

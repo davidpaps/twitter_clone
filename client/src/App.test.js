@@ -2,6 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import App from "./App";
 import SignIn from "./components/signIn/signIn";
+import AddTweet from "./components/addTweet/addTweet";
 
 describe("App", () => {
   let wrapper;
@@ -14,5 +15,9 @@ describe("App", () => {
 
   it("should render the SignIn component", () => {
     expect(wrapper.containsMatchingElement(<SignIn />)).toEqual(true);
+  });
+
+  it("should render the SignIn component", () => {
+    expect(wrapper.containsMatchingElement(<AddTweet />)).toEqual(true);
   });
 });
