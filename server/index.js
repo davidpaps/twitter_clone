@@ -35,15 +35,15 @@ app.post("/tweets", async (req, res) => {
   res.json(newTweet.rows[0]);
 });
 
-// app.put("/tweets/:id", async (req, res) => {
-//   const { id } = req.params;
-//   const { description } = req.body;
-//   const updateTweet = await pool.query(
-//     "UPDATE tweets SET description = $1 WHERE tweet_id = $2",
-//     [description, id]
-//   );
-//   res.json("Tweet was updated!");
-// });
+app.put("/tweets/:id", async (req, res) => {
+  const { id } = req.params;
+  const { description } = req.body;
+  const updateTweet = await pool.query(
+    "UPDATE tweets SET description = $1 WHERE tweet_id = $2",
+    [description, id]
+  );
+  res.json("Tweet was updated!");
+});
 
 // app.delete("/tweets/:id", async (req, res) => {
 //   const { id } = req.params;
