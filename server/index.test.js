@@ -44,8 +44,30 @@ it("gets a specific tweet from /tweets/:id", async (done) => {
 
     .then((response) => {
       expect(response.statusCode).toBe(200);
-      console.log(response.body.description);
       expect(response.body.description).toEqual("test tweet");
     });
+  done();
+});
+
+it("updates a tweet", async (done) => {
+  const tweet = await request.get("/tweets").then((response) => {
+    return response.body[0].tweet_id;
+  });
+
+  await request
+    .put(`/tweets/${tweet}`)
+    .send({ description: "new tweet" })
+
+    .then((response) => {
+      expect(response.statusCode).toBe(200);
+      expect(response.body).toBe("Tweet was updated!");
+    });
+
+  const updatedTweet = await request.get("/tweets").then((response) => {
+    return response.body[0].description;
+  });
+
+  expect(updatedTweet).toBe("new tweet");
+
   done();
 });
