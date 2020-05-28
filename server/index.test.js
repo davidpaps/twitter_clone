@@ -50,12 +50,12 @@ it("gets a specific tweet from /tweets/:id", async (done) => {
 });
 
 it("updates a tweet", async (done) => {
-  const tweet = await request.get("/tweets").then((response) => {
+  const tweetId = await request.get("/tweets").then((response) => {
     return response.body[0].tweet_id;
   });
 
   await request
-    .put(`/tweets/${tweet}`)
+    .put(`/tweets/${tweetId}`)
     .send({ description: "new tweet" })
 
     .then((response) => {
@@ -68,6 +68,28 @@ it("updates a tweet", async (done) => {
   });
 
   expect(updatedTweet).toBe("new tweet");
+
+  done();
+});
+
+it("deletes a tweet", async (done) => {
+  const tweetId = await request.get("/tweets").then((response) => {
+    return response.body[0].tweet_id;
+  });
+
+  await request
+    .delete(`/tweets/${tweetId}`)
+
+    .then((response) => {
+      expect(response.statusCode).toBe(200);
+      expect(response.body).toBe("Tweet was deleted!");
+    });
+
+  const tweets = await request.get("/tweets").then((response) => {
+    return response.body.length;
+  });
+
+  expect(tweets).toEqual(0);
 
   done();
 });

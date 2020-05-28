@@ -45,14 +45,14 @@ app.put("/tweets/:id", async (req, res) => {
   res.json("Tweet was updated!");
 });
 
-// app.delete("/tweets/:id", async (req, res) => {
-//   const { id } = req.params;
-//   const deleteTweet = await pool.query(
-//     "DELETE FROM tweets WHERE tweet_id = $1",
-//     [id]
-//   );
-//   res.json("Tweet was deleted!");
-// });
+app.delete("/tweets/:id", async (req, res) => {
+  const { id } = req.params;
+  const deleteTweet = await pool.query(
+    "DELETE FROM tweets WHERE tweet_id = $1",
+    [id]
+  );
+  res.json("Tweet was deleted!");
+});
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
