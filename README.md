@@ -65,3 +65,13 @@ Update the [**db.js**](db.js) and [**testDb.js**](testDb.js) files with your `Us
 ```
 npm start
 ```
+
+Open up a new terminal, and then navigate to the [**Client**](client) directory. From here in the command line, also type in:
+
+```
+npm start
+```
+
+This will start up the Frontend, React interface. A tab on your browser will open with [**this**](http://localhost:3000/). From here you will see the Twitter User Interface. Tweets can then be written, viewed, updated of deleted, this will be reflected in the Posgres database!
+
+---
