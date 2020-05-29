@@ -2,6 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import Home from "./home";
 import AddTweet from "../addTweet/addTweet";
+import ListTweets from "../listTweets/listTweets";
 
 describe("Home", () => {
   let wrapper;
@@ -14,5 +15,9 @@ describe("Home", () => {
 
   it("should render the AddTweet component", () => {
     expect(wrapper.containsMatchingElement(<AddTweet />)).toEqual(true);
+  });
+
+  it("should render the ListTweets component", () => {
+    expect(wrapper.containsMatchingElement(<ListTweets />)).toEqual(true);
   });
 });

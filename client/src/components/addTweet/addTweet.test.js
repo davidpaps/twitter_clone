@@ -7,7 +7,7 @@ describe("Add Tweet", () => {
 
   beforeEach(() => (wrapper = shallow(<AddTweet />)));
 
-  it("should render a <div />", () => {
+  it("should render a <Fragment />", () => {
     expect(wrapper.find("Fragment").length).toEqual(1);
   });
 
