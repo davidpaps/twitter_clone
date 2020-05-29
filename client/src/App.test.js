@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import App from "./App";
 import SignIn from "./components/signIn/signIn";
-import AddTweet from "./components/addTweet/addTweet";
+import Home from "./components/home/home";
 
 describe("App", () => {
   let wrapper;
@@ -17,7 +17,7 @@ describe("App", () => {
     expect(wrapper.containsMatchingElement(<SignIn />)).toEqual(true);
   });
 
-  it("should render the SignIn component", () => {
-    expect(wrapper.containsMatchingElement(<AddTweet />)).toEqual(true);
+  it("should render the Home component", () => {
+    expect(wrapper.containsMatchingElement(<Home />)).toEqual(true);
   });
 });
