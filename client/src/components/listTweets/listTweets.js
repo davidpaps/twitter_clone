@@ -17,24 +17,20 @@ const ListTweets = () => {
   return (
     <Fragment>
       <h1 className="text-center mt-5">List Tweets</h1>
-      <table className="table mt-5 text-center">
-        <thead>
-          <tr>
-            <th>Tweet</th>
-            <th>Edit</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {tweets.map((tweet) => (
-            <tr>
-              <td>{tweet.description}</td>
-              <td>Edit</td>
-              <td>Delete</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {tweets.map((tweet) => (
+        <div className="card" key={tweet.tweet_id}>
+          <div className="card-body">
+            <h4 className="card-title">Tweet Number {tweet.tweet_id}</h4>
+            <p className="card-text">{tweet.description}</p>
+            <a href="#edit" className="btn sm btn-success">
+              Edit
+            </a>
+            <a href="#delete" className="sm btn btn-danger m-1">
+              Delete
+            </a>
+          </div>
+        </div>
+      ))}
     </Fragment>
   );
 };
