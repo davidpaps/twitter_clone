@@ -5,12 +5,7 @@ import EditTweet from "./editTweet";
 describe("Edit Tweet", () => {
   let wrapper;
 
-  beforeEach(
-    () =>
-      (wrapper = shallow(
-        <EditTweet tweet={{ tweet_id: 1, description: "tweet" }} />
-      ))
-  );
+  beforeEach(() => (wrapper = shallow(<EditTweet tweet={""} />)));
 
   it("should render a <Fragment />", () => {
     expect(wrapper.find("Fragment").length).toEqual(1);

@@ -18,4 +18,11 @@ describe("Add Tweet", () => {
   it("should render a <button />", () => {
     expect(wrapper.find("button").length).toEqual(1);
   });
+
+  it("simulates adding a tweet", () => {
+    const eventObj = { target: { value: "test tweet" } };
+    expect(wrapper.find("input.form-control").props().value).toBe("");
+    wrapper.find("input.form-control").simulate("change", eventObj);
+    expect(wrapper.find("input.form-control").props().value).toBe("test tweet");
+  });
 });
