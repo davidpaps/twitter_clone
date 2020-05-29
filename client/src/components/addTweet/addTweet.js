@@ -25,7 +25,7 @@ const AddTweet = () => {
           value={description}
           onChange={(event) => setDescription(event.target.value)}
         />
-        <button className="btn btn-success">Add</button>
+        <button className="btn btn-outline-success btn-sm">Add</button>
       </form>
     </Fragment>
   );

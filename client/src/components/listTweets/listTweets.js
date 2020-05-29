@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
+import EditTweet from "../editTweet/editTweet";
 
 const ListTweets = () => {
   const [tweets, setTweets] = useState([]);
@@ -29,9 +30,7 @@ const ListTweets = () => {
           <div className="card-body">
             <h4 className="card-title">Tweet Number {tweet.tweet_id}</h4>
             <p className="card-text">{tweet.description}</p>
-            <a href="#edit" className="btn btn-outline-success btn-sm">
-              Edit
-            </a>
+            <EditTweet tweet={tweet} />
             <button
               className="btn btn-outline-danger btn-sm m-1"
               onClick={() => deleteTweets(tweet.tweet_id)}
