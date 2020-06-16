@@ -29,6 +29,6 @@ describe("App", () => {
   });
 
   it("should render a <Route />", () => {
-    expect(wrapper.find("Route").length).toEqual(4);
+    expect(wrapper.find("Route").length).toEqual(5);
   });
 });
