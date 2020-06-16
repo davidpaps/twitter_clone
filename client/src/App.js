@@ -4,8 +4,8 @@ import "./App.css";
 import SignIn from "./components/signIn/signIn";
 import SignUp from "./components/signUp/signUp";
 import Home from "./components/home/home";
-import Navigation from "./components/navigation";
-import Error from "./components/error";
+import Navigation from "./components/navigation/navigation";
+import Error from "./components/error/error";
 
 function App() {
   return (

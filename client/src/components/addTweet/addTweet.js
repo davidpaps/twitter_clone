@@ -17,13 +17,13 @@ const AddTweet = () => {
 
   return (
     <Fragment>
-      <h1 className="text-center mt-5">Add a Tweet</h1>
       <form className="d-flex mt-5" onSubmit={onSubmitForm}>
         <input
           required
           type="text"
           className="form-control"
           value={description}
+          placeholder="Add a Tweet!"
           onChange={(event) => setDescription(event.target.value)}
         />
         <button className="btn btn-outline-success btn-sm">Add</button>

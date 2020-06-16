@@ -24,7 +24,7 @@ const ListTweets = () => {
 
   return (
     <Fragment>
-      <h1 className="text-center mt-5">List Tweets</h1>
+      <h1 className="text-center mt-5">Your Tweets</h1>
       {tweets.map((tweet) => (
         <div className="card" key={tweet.tweet_id}>
           <div className="card-body">
