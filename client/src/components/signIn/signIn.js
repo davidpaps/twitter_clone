@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
   return (
@@ -7,7 +8,9 @@ const SignIn = () => {
       <form className="d-flex mt-5">
         <input className="form-control" type="email" />
         <input className="form-control" type="password" />
-        <button className="btn btn-success">Sign In</button>
+        <Link to="/">
+          <button className="btn btn-success">Sign In!</button>
+        </Link>
       </form>
     </Fragment>
   );
