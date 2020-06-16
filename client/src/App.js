@@ -4,23 +4,18 @@ import "./App.css";
 import SignIn from "./components/signIn/signIn";
 import Home from "./components/home/home";
 import Navigation from "./components/navigation";
+import Error from "./components/error";
 
 function App() {
   return (
-    // <Fragment>
-    //   <div className="container">
-    //     <SignIn />
-    //     <Home />
-    //   </div>
-    // </Fragment>
     <BrowserRouter>
-      <div>
-        <Navigation />
+      <Navigation />
+      <div className="container">
         <Switch>
           <Route path="/sign_in" component={SignIn} exact />
           <Route path="/" component={Home} />
-          {/* <Route path="/contact" component={Contact}/>
-        <Route component={Error}/> */}
+          {/* <Route path="/contact" component={Contact}/> */}
+          <Route component={Error} />
         </Switch>
       </div>
     </BrowserRouter>
