@@ -10,4 +10,8 @@ describe("List Tweet", () => {
   it("should render a <Fragment />", () => {
     expect(wrapper.find("Fragment").length).toEqual(1);
   });
+
+  it("should render a <div />", () => {
+    expect(wrapper.find("div").length).toEqual(2);
+  });
 });

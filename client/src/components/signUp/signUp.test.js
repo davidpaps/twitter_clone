@@ -1,11 +1,11 @@
 import React from "react";
 import { shallow } from "enzyme";
-import SignIn from "./signIn";
+import SignUp from "./signUp";
 
-describe("Sign In", () => {
+describe("Sign Up", () => {
   let wrapper;
 
-  beforeEach(() => (wrapper = shallow(<SignIn />)));
+  beforeEach(() => (wrapper = shallow(<SignUp />)));
 
   it("should render a <Fragment />", () => {
     expect(wrapper.find("Fragment").length).toEqual(1);
