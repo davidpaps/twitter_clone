@@ -10,4 +10,12 @@ describe("Edit Tweet", () => {
   it("should render a <Fragment />", () => {
     expect(wrapper.find("Fragment").length).toEqual(1);
   });
+
+  it("should render a <button />", () => {
+    expect(wrapper.find("button").length).toEqual(4);
+  });
+
+  it("should render a <div />", () => {
+    expect(wrapper.find("div").length).toEqual(6);
+  });
 });
