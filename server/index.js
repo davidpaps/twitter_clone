@@ -69,6 +69,18 @@ app.get("/users/:id", async (req, res) => {
   res.json(users.rows[0]);
 });
 
+app.post("/users", async (req, res) => {
+  const { email } = req.body;
+  const { username } = req.body;
+  const { password } = req.body;
+  const newUser = await pool.query(
+    "INSERT INTO users (email, username, password) VALUES($1, $2, $3) RETURNING *",
+    [email, username, password]
+  );
+  console.log(newUser.rows);
+  res.json(newUser.rows[0]);
+});
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
