@@ -1,4 +1,12 @@
-# Pern Twitter Clone
+# Twitter - Built with the PERN Stack
+
+A Full Stack PERN Application (PostgreSQL, Express, React, Node) that explores RESTful API's in a CRUD (Create, Read, Update, Delete) App that users can sign up, sign in and make, edit and delete posts.
+
+This simulates Twitter and stores all 'Tweets' in the attached database. It was Test driven using the Jest and Enzyme libraries.
+
+---
+
+## User Stories
 
 ```
 As a user
@@ -73,5 +81,17 @@ npm start
 ```
 
 This will start up the Frontend, React interface. A tab on your browser will open with [**this**](http://localhost:3000/). From here you will see the Twitter User Interface. Tweets can then be written, viewed, updated of deleted, this will be reflected in the Posgres database!
+
+---
+
+## Testing
+
+To run the testing suite, open up the terminal and type in:
+
+```
+npm test
+```
+
+This will start the Jest/Enzyme testing libraries and display all 29 passing tests, with 100% coverage.
 
 ---
