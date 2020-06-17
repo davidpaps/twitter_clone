@@ -66,7 +66,7 @@ This will install the dependencies needed, and install the PostgreSQL database a
 psql
 ```
 
-Then open up the [**database.sql**](database.sql) and [**testDatabase.sql**](testDatabase.sql) files (inside [**database**](database) directory), and copy the `CREATE DATABASE` and `CREATE TABLE` commands into the psql command line. This will create your database, and test database and your tables to store the descriptions of the tweets.
+Then open up the [**database.sql**](database.sql) and [**testDatabase.sql**](testDatabase.sql) files (inside [**database**](database) directory), and copy the `CREATE DATABASE`, `CREATE TABLE` and `ALTER TABLE` commands into the psql command line. This will create your database, and test database and your tables to store the descriptions of the tweets.
 
 Update the [**db.js**](db.js) and [**testDb.js**](testDb.js) files with your `User` field from the Postgres (and any password if applicable).
 

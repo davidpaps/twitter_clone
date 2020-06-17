@@ -54,6 +54,14 @@ app.delete("/tweets/:id", async (req, res) => {
   res.json("Tweet was deleted!");
 });
 
+//
+
+app.get("/users", async (req, res) => {
+  const allUsers = await pool.query("SELECT * FROM users");
+  console.log(allUsers.rows);
+  res.json(allUsers.rows);
+});
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
