@@ -12,6 +12,6 @@ describe("Navigation", () => {
   });
 
   it("should render three <NavLink />", () => {
-    expect(wrapper.find("NavLink").length).toEqual(4);
+    expect(wrapper.find("NavLink").length).toEqual(5);
   });
 });
