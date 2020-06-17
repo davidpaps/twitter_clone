@@ -10,6 +10,7 @@ describe("CRUD Cycle Endpoints", () => {
 
   afterAll(() => {
     pool.query("TRUNCATE TABLE tweets;");
+    pool.query("TRUNCATE TABLE users;");
   });
 
   describe("tweets", () => {
@@ -97,44 +98,50 @@ describe("CRUD Cycle Endpoints", () => {
     });
   });
 
-  it("posts a user via /users", async (done) => {
-    await request
-      .post("/users")
-      .send({ email: "test@email.com", username: "test", password: "password" })
+  describe("users", () => {
+    it("posts a user via /users", async (done) => {
+      await request
+        .post("/users")
+        .send({
+          email: "test@test.com",
+          username: "username",
+          password: "password",
+        })
 
-      .then((response) => {
-        expect(response.statusCode).toBe(200);
-        expect(response.body.email).toBe("test@email.com");
-        expect(response.body.username).toBe("test");
-        expect(response.body.password).toBe("password");
-      });
-    pool.query("TRUNCATE TABLE users;");
-    done();
+        .then((response) => {
+          expect(response.statusCode).toBe(200);
+          expect(response.body.email).toBe("test@test.com");
+          expect(response.body.username).toBe("username");
+          expect(response.body.password).toBe("password");
+        });
+
+      done();
+    });
+
+    it("gets isers from /users", async (done) => {
+      await request
+
+        .get("/users")
+
+        .then((response) => {
+          expect(response.statusCode).toBe(200);
+          expect(response.body.length).toEqual(1);
+        });
+      done();
+    });
+
+    // it("gets a specific tweet from /tweets/:id", async (done) => {
+    //   const tweet = await request.get("/tweets").then((response) => {
+    //     return response.body[0].tweet_id;
+    //   });
+    //   await request
+    //     .get(`/tweets/${tweet}`)
+
+    //     .then((response) => {
+    //       expect(response.statusCode).toBe(200);
+    //       expect(response.body.description).toEqual("test tweet");
+    //     });
+    //   done();
+    // });
   });
-
-  // it("gets tweets from /tweets", async (done) => {
-  //   await request
-
-  //     .get("/tweets")
-
-  //     .then((response) => {
-  //       expect(response.statusCode).toBe(200);
-  //       expect(response.body.length).toEqual(1);
-  //     });
-  //   done();
-  // });
-
-  // it("gets a specific tweet from /tweets/:id", async (done) => {
-  //   const tweet = await request.get("/tweets").then((response) => {
-  //     return response.body[0].tweet_id;
-  //   });
-  //   await request
-  //     .get(`/tweets/${tweet}`)
-
-  //     .then((response) => {
-  //       expect(response.statusCode).toBe(200);
-  //       expect(response.body.description).toEqual("test tweet");
-  //     });
-  //   done();
-  // });
 });
