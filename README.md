@@ -68,19 +68,21 @@ psql
 
 Then open up the [**database.sql**](database.sql) and [**testDatabase.sql**](testDatabase.sql) files (inside [**database**](database) directory), and copy the `CREATE DATABASE` and `CREATE TABLE` commands into the psql command line. This will create your database, and test database and your tables to store the descriptions of the tweets.
 
-Update the [**db.js**](db.js) and [**testDb.js**](testDb.js) files with your `User` field from the Postgres (and any password if applicable). Then from the command line, start up the server (in the server directory) by typing in:
+Update the [**db.js**](db.js) and [**testDb.js**](testDb.js) files with your `User` field from the Postgres (and any password if applicable).
+
+Then from the command line, start up the server by navigating to the [**Server**](server) directory and type:
+
+```
+npx nodemon
+```
+
+This will start the Resful API backend and the PostgreSQL database. Then Open up a new terminal, and then navigate to the [**Client**](client) directory. From here in the command line, type in:
 
 ```
 npm start
 ```
 
-Open up a new terminal, and then navigate to the [**Client**](client) directory. From here in the command line, also type in:
-
-```
-npm start
-```
-
-This will start up the Frontend, React interface. A tab on your browser will open with [**this**](http://localhost:3000/). From here you will see the Twitter User Interface. Tweets can then be written, viewed, updated of deleted, this will be reflected in the Posgres database!
+This will start up the Frontend, React interface. A tab on your browser will open with [**this**](http://localhost:3000/). From here you will see the Twitter User Interface instructing you to log in or sign up. Tweets can then be written, viewed, updated of deleted, this will be reflected in the Posgres database!
 
 ---
 
