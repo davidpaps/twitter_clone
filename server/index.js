@@ -77,7 +77,6 @@ app.post("/users", async (req, res) => {
     "INSERT INTO users (email, username, password) VALUES($1, $2, $3) RETURNING *",
     [email, username, password]
   );
-  console.log(newUser.rows);
   res.json(newUser.rows[0]);
 });
 
