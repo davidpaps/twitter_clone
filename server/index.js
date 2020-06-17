@@ -58,8 +58,15 @@ app.delete("/tweets/:id", async (req, res) => {
 
 app.get("/users", async (req, res) => {
   const allUsers = await pool.query("SELECT * FROM users");
-  console.log(allUsers.rows);
   res.json(allUsers.rows);
+});
+
+app.get("/users/:id", async (req, res) => {
+  const { id } = req.params;
+  const users = await pool.query("SELECT * FROM users WHERE user_id = $1", [
+    id,
+  ]);
+  res.json(users.rows[0]);
 });
 
 app.listen(port, () => {
