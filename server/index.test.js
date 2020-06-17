@@ -8,12 +8,11 @@ describe("CRUD Cycle Endpoints", () => {
     process.env.NODE_ENV = "test";
   });
 
-  afterAll(() => {
-    pool.query("TRUNCATE TABLE tweets;");
-    pool.query("TRUNCATE TABLE users;");
-  });
-
   describe("tweets", () => {
+    afterAll(() => {
+      pool.query("TRUNCATE TABLE tweets;");
+    });
+
     it("posts a tweet via /tweets", async (done) => {
       await request
         .post("/tweets")
@@ -99,6 +98,10 @@ describe("CRUD Cycle Endpoints", () => {
   });
 
   describe("users", () => {
+    beforeAll(() => {
+      pool.query("DELETE FROM users WHERE user_id > 0;");
+    });
+
     it("posts a user via /users", async (done) => {
       await request
         .post("/users")
@@ -118,7 +121,7 @@ describe("CRUD Cycle Endpoints", () => {
       done();
     });
 
-    it("gets isers from /users", async (done) => {
+    it("gets users from /users", async (done) => {
       await request
 
         .get("/users")
@@ -130,18 +133,19 @@ describe("CRUD Cycle Endpoints", () => {
       done();
     });
 
-    // it("gets a specific tweet from /tweets/:id", async (done) => {
-    //   const tweet = await request.get("/tweets").then((response) => {
-    //     return response.body[0].tweet_id;
-    //   });
-    //   await request
-    //     .get(`/tweets/${tweet}`)
+    it("gets a specific user from /users/:id", async (done) => {
+      const user = await request.get("/users").then((response) => {
+        return response.body[0].user_id;
+      });
+      await request
+        .get(`/users/${user}`)
 
-    //     .then((response) => {
-    //       expect(response.statusCode).toBe(200);
-    //       expect(response.body.description).toEqual("test tweet");
-    //     });
-    //   done();
-    // });
+        .then((response) => {
+          expect(response.statusCode).toBe(200);
+          expect(response.body.email).toEqual("test@test.com");
+          expect(response.body.username).toEqual("username");
+        });
+      done();
+    });
   });
 });
