@@ -20,7 +20,7 @@ describe("Navigation", () => {
   });
 
   it("should render a <ul />", () => {
-    expect(wrapper.find("ul").length).toEqual(1);
+    expect(wrapper.find("ul").length).toEqual(2);
   });
 
   it("should render a <li />", () => {
