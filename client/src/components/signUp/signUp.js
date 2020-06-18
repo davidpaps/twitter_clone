@@ -10,7 +10,6 @@ const SignUp = () => {
     event.preventDefault();
 
     const body = { email: email, username: username, password: password };
-    console.log(body);
     const response = await fetch("http://localhost:5000/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
