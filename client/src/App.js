@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import SignIn from "./components/signIn/signIn";
 import SignUp from "./components/signUp/signUp";
@@ -8,28 +8,31 @@ import Navigation from "./components/navigation/navigation";
 import Error from "./components/error/error";
 import Home from "./components/home/home";
 import SignOut from "./components/signOut/signOut";
+import PrivateRoute from "./components/privateRoute";
+import { AuthContext } from "./components/context/useAuth";
 
-class App extends Component {
-  state = {};
-  render() {
-    return (
+const App = (props) => {
+  return (
+    <AuthContext.Provider value={false}>
       <Fragment>
-        <BrowserRouter>
+        <Router>
           <Navigation />
           <div className="container">
-            <Switch>
-              <Route path="/" component={Home} exact />
-              <Route path="/sign_in" component={SignIn} exact />
-              <Route path="/sign_up" component={SignUp} exact />
-              <Route path="/sign_out" component={SignOut} exact />
-              <Route path="/home" component={Twitter} />
-              <Route component={Error} />
-            </Switch>
+            <ul>
+              <Switch>
+                <Route path="/" component={Home} exact />
+                <Route path="/sign_in" component={SignIn} exact />
+                <Route path="/sign_up" component={SignUp} exact />
+                <Route path="/sign_out" component={SignOut} exact />
+                <PrivateRoute path="/home" component={Twitter} />
+                <Route component={Error} />
+              </Switch>
+            </ul>
           </div>
-        </BrowserRouter>
+        </Router>
       </Fragment>
-    );
-  }
-}
+    </AuthContext.Provider>
+  );
+};
 
 export default App;
