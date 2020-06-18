@@ -9,13 +9,12 @@ const SignUp = () => {
   const onSubmitForm = async (event) => {
     event.preventDefault();
 
-    const emaill = { email };
-    const usernamee = { username };
-    const passwordd = { password };
+    const body = { email: email, username: username, password: password };
+    console.log(body);
     const response = await fetch("http://localhost:5000/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(emaill, usernamee, passwordd),
+      body: JSON.stringify(body),
     });
     window.location = "/home";
   };
@@ -23,30 +22,34 @@ const SignUp = () => {
   return (
     <Fragment>
       <h1 className="text-center mt-5">Twitter Sign Up</h1>
-      <form className="d-flex mt-5">
+      <form className="d-flex mt-5" onSubmit={onSubmitForm}>
         <input
           className="form-control"
           type="text"
           required
           placeholder="Enter a Username"
+          value={username}
+          onChange={(event) => setUsername(event.target.value)}
         />
         <input
           className="form-control"
           type="email"
           required
           placeholder="Enter a Valid Email Address"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
         />
         <input
           className="form-control"
           type="password"
           required
           placeholder="Enter a Secure Password"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
         />
-        <Link to="/home">
-          <button className="btn btn-outline-success btn-sm mr-xl-5 w-100 h-100">
-            Create Account!
-          </button>
-        </Link>
+        <button className="btn btn-outline-success btn-sm mr-xl-5 w-100 h-150">
+          Create Account!
+        </button>
       </form>
       <br></br>
       <Link to="/sign_in">
