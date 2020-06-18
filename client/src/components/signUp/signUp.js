@@ -1,7 +1,25 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const onSubmitForm = async (event) => {
+    event.preventDefault();
+
+    const emaill = { email };
+    const usernamee = { username };
+    const passwordd = { password };
+    const response = await fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(emaill, usernamee, passwordd),
+    });
+    window.location = "/home";
+  };
+
   return (
     <Fragment>
       <h1 className="text-center mt-5">Twitter Sign Up</h1>
