@@ -22,7 +22,7 @@ const App = (props) => {
               <Route path="/sign_in" component={SignIn} exact />
               <Route path="/sign_up" component={SignUp} exact />
               <Route path="/sign_out" component={SignOut} exact />
-              <PrivateRoute path="/home" component={Twitter} />
+              <Route path="/home" component={Twitter} />
               <Route component={Error} />
             </Switch>
           </ul>
