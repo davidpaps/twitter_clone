@@ -8,9 +8,9 @@ const SignIn = () => {
       <form className="d-flex mt-5">
         <input
           className="form-control"
-          type="email"
+          type="text"
           required
-          placeholder="Enter Your Twitter Email Address"
+          placeholder="Enter Your Twitter username"
         />
         <input
           className="form-control"

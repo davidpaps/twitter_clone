@@ -8,6 +8,12 @@ const SignUp = () => {
       <form className="d-flex mt-5">
         <input
           className="form-control"
+          type="text"
+          required
+          placeholder="Enter a Username"
+        />
+        <input
+          className="form-control"
           type="email"
           required
           placeholder="Enter a Valid Email Address"

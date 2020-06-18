@@ -15,6 +15,10 @@ describe("Sign In", () => {
     expect(wrapper.find("form").length).toEqual(1);
   });
 
+  it("should render a <Input/>", () => {
+    expect(wrapper.find("input").length).toEqual(2);
+  });
+
   it("should render a <button/>", () => {
     expect(wrapper.find("button").length).toEqual(2);
   });
