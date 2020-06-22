@@ -18,12 +18,12 @@ const App = (props) => {
         <div className="container">
           <ul>
             <Switch>
-              <Route path="/" component={Home} exact />
-              <Route path="/sign_in" component={SignIn} exact />
-              <Route path="/sign_up" component={SignUp} exact />
-              <Route path="/sign_out" component={SignOut} exact />
-              <Route path="/home" component={Twitter} />
-              <Route component={Error} />
+              <Route exact path="/" component={Home} />
+              {/* <Route path="/sign_in" component={SignIn} exact /> */}
+              {/* <Route path="/sign_up" component={SignUp} exact /> */}
+              {/* <Route path="/sign_out" component={SignOut} exact /> */}
+              <PrivateRoute path="/home" component={Twitter} />
+              {/* <Route component={Error} /> */}
             </Switch>
           </ul>
         </div>
