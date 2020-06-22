@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import auth from "../auth";
 
@@ -19,18 +19,9 @@ const SignIn = (props) => {
           required
           placeholder="Enter Your Secure Password"
         />
-        {/* <Link to="/home"> */}
-        <button
-          onClick={() => {
-            auth.signIn(() => {
-              props.history.push("/home");
-            });
-          }}
-          className="btn btn-outline-success btn-sm mr-xl-5 w-100 h-100"
-        >
+        <button className="btn btn-outline-success btn-sm mr-xl-5 w-100 h-100">
           Sign-In!
         </button>
-        {/* </Link> */}
       </form>
       <br></br>
       <Link to="/sign_up">

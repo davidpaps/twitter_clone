@@ -9,6 +9,7 @@ import Error from "./components/error/error";
 import Home from "./components/home/home";
 import SignOut from "./components/signOut/signOut";
 import PrivateRoute from "./components/privateRoute";
+import auth from "./components/auth";
 
 const App = () => {
   return (
@@ -21,7 +22,6 @@ const App = () => {
               <Route exact path="/" component={Home} />
               <Route exact path="/sign_in" component={SignIn} />
               <Route exact path="/sign_up" component={SignUp} />
-              <PrivateRoute exact path="/sign_out" component={SignOut} />
               <PrivateRoute exact path="/home" component={Twitter} />
               <Route component={Error} />
             </Switch>
