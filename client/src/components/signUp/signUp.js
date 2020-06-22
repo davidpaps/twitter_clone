@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
+import auth from "../auth";
 
-const SignUp = () => {
+const SignUp = (props) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -15,7 +16,9 @@ const SignUp = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    window.location = "/home";
+    auth.signIn(() => {
+      props.history.push("/home");
+    });
   };
 
   return (

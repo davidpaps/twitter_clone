@@ -20,7 +20,7 @@ const ListTweets = () => {
 
   useEffect(() => {
     getTweets();
-  }, []);
+  }, [tweets]);
 
   return (
     <Fragment>

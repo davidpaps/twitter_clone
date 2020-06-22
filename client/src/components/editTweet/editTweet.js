@@ -15,7 +15,6 @@ const EditTweet = ({ tweet }) => {
         body: JSON.stringify(body),
       }
     );
-    window.location = "/home";
   };
 
   return (
