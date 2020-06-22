@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import SignIn from "./components/signIn/signIn";
@@ -10,7 +10,7 @@ import Home from "./components/home/home";
 import SignOut from "./components/signOut/signOut";
 import PrivateRoute from "./components/privateRoute";
 
-const App = (props) => {
+const App = () => {
   return (
     <Fragment>
       <Router>
@@ -19,11 +19,11 @@ const App = (props) => {
           <ul>
             <Switch>
               <Route exact path="/" component={Home} />
-              {/* <Route path="/sign_in" component={SignIn} exact /> */}
-              {/* <Route path="/sign_up" component={SignUp} exact /> */}
-              {/* <Route path="/sign_out" component={SignOut} exact /> */}
-              <PrivateRoute path="/home" component={Twitter} />
-              {/* <Route component={Error} /> */}
+              <Route exact path="/sign_in" component={SignIn} />
+              <Route exact path="/sign_up" component={SignUp} />
+              <PrivateRoute exact path="/sign_out" component={SignOut} />
+              <PrivateRoute exact path="/home" component={Twitter} />
+              <Route component={Error} />
             </Switch>
           </ul>
         </div>
