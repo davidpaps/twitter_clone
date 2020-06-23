@@ -1,11 +1,13 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import auth from "../auth";
+import Prompt from "../prompt";
 
 const SignUp = (props) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState(false);
 
   const onSubmitForm = async (event) => {
     event.preventDefault();
@@ -16,9 +18,12 @@ const SignUp = (props) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    auth.signIn(() => {
-      props.history.push("/home");
-    });
+    let validate = await response.json().then((data) => data);
+    validate === true
+      ? auth.signIn(() => {
+          props.history.push("/home");
+        })
+      : setMessage(true);
   };
 
   return (
@@ -59,6 +64,7 @@ const SignUp = (props) => {
           Already Have an Account? Click Here to Sign In!
         </button>
       </Link>
+      <Prompt message={message} />
     </Fragment>
   );
 };

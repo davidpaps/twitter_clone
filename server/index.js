@@ -77,7 +77,11 @@ app.post("/users", async (req, res) => {
     "INSERT INTO users (email, username, password) VALUES($1, $2, $3) RETURNING *",
     [email, username, password]
   );
-  res.json(newUser.rows[0]);
+  if (newUser.rows[0]) {
+    res.json(newUser.rows[0]);
+  } else {
+    res.json("Error");
+  }
 });
 
 app.post("/users/:username", async (req, res) => {
