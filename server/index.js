@@ -87,9 +87,7 @@ app.post("/users/username", async (req, res) => {
     "SELECT * FROM users WHERE username = $1",
     [username]
   );
-  password === userExist.rows[0].password
-    ? res.json(userExist.rows[0])
-    : console.log(false);
+  password === userExist.rows[0].password ? res.json(userExist.rows[0]) : false;
 });
 
 app.listen(port, () => {

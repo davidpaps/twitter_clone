@@ -15,7 +15,6 @@ const SignIn = (props) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    console.log("BODYYYYYYYY", body);
     auth.signIn(() => {
       props.history.push("/home");
     });
