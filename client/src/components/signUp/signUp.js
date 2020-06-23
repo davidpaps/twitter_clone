@@ -19,11 +19,13 @@ const SignUp = (props) => {
       body: JSON.stringify(body),
     });
     let validate = await response.json().then((data) => data);
-    validate === true
-      ? auth.signIn(() => {
-          props.history.push("/home");
-        })
-      : setMessage(true);
+    if (validate === "Error") {
+      setMessage(true);
+    } else {
+      auth.signIn(() => {
+        props.history.push("/home");
+      });
+    }
   };
 
   return (

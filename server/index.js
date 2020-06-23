@@ -70,16 +70,20 @@ app.get("/users/:id", async (req, res) => {
 });
 
 app.post("/users", async (req, res) => {
-  const { email } = req.body;
-  const { username } = req.body;
-  const { password } = req.body;
-  const newUser = await pool.query(
-    "INSERT INTO users (email, username, password) VALUES($1, $2, $3) RETURNING *",
-    [email, username, password]
-  );
-  if (newUser.rows[0]) {
-    res.json(newUser.rows[0]);
-  } else {
+  try {
+    const { email } = req.body;
+    const { username } = req.body;
+    const { password } = req.body;
+    const newUser = await pool.query(
+      "INSERT INTO users (email, username, password) VALUES($1, $2, $3) RETURNING *",
+      [email, username, password]
+    );
+    if (newUser.rows[0]) {
+      res.json(newUser.rows[0]);
+    } else {
+      res.json("Error");
+    }
+  } catch (err) {
     res.json("Error");
   }
 });
@@ -98,7 +102,7 @@ app.post("/users/:username", async (req, res) => {
       res.json("Error");
     }
   } else {
-    res.json("Error 2");
+    res.json("Error");
   }
 });
 
