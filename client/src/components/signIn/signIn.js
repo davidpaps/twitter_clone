@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import auth from "../auth";
+import Prompt from "../prompt";
 
 const SignIn = (props) => {
   const [username, setUsername] = useState("");
@@ -53,6 +54,7 @@ const SignIn = (props) => {
           Click Here to Sign Up to Twitter!
         </button>
       </Link>
+      <Prompt message={message} />
     </Fragment>
   );
 };
