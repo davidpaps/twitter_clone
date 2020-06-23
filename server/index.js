@@ -80,14 +80,22 @@ app.post("/users", async (req, res) => {
   res.json(newUser.rows[0]);
 });
 
-app.post("/users/username", async (req, res) => {
+app.post("/users/:username", async (req, res) => {
   const { username } = req.body;
   const { password } = req.body;
-  const userExist = await pool.query(
-    "SELECT * FROM users WHERE username = $1",
-    [username]
-  );
-  password === userExist.rows[0].password ? res.json(userExist.rows[0]) : false;
+  const user = await pool.query("SELECT * FROM users WHERE username = $1", [
+    username,
+  ]);
+  if (user.rows[0]) {
+    let validated = user.rows[0].password === password;
+    if (validated) {
+      res.json(validated);
+    } else {
+      res.json("Error");
+    }
+  } else {
+    res.json("Error 2");
+  }
 });
 
 app.listen(port, () => {

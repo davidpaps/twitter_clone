@@ -5,19 +5,23 @@ import auth from "../auth";
 const SignIn = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState(false);
 
   const onSubmitForm = async (event) => {
     event.preventDefault();
 
     const body = { username: username, password: password };
-    const response = await fetch("http://localhost:5000/users/username", {
+    const response = await fetch(`http://localhost:5000/users/${username}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    auth.signIn(() => {
-      props.history.push("/home");
-    });
+    let validate = await response.json().then((data) => data);
+    validate === true
+      ? auth.signIn(() => {
+          props.history.push("/home");
+        })
+      : setMessage(true);
   };
   return (
     <Fragment>
