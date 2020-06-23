@@ -22,6 +22,7 @@ const App = () => {
               <Route exact path="/" component={Home} />
               <Route exact path="/sign_in" component={SignIn} />
               <Route exact path="/sign_up" component={SignUp} />
+              <PrivateRoute exact path="/sign_out" component={SignOut} />
               <PrivateRoute exact path="/home" component={Twitter} />
               <Route component={Error} />
             </Switch>

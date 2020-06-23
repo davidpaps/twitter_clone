@@ -80,6 +80,18 @@ app.post("/users", async (req, res) => {
   res.json(newUser.rows[0]);
 });
 
+app.post("/users/username", async (req, res) => {
+  const { username } = req.body;
+  const { password } = req.body;
+  const userExist = await pool.query(
+    "SELECT * FROM users WHERE username = $1",
+    [username]
+  );
+  password === userExist.rows[0].password
+    ? res.json(userExist.rows[0])
+    : console.log(false);
+});
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
