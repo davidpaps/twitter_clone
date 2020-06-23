@@ -7,7 +7,7 @@ const SignUp = (props) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState(false);
+  const [message, setMessage] = useState(0);
 
   const onSubmitForm = async (event) => {
     event.preventDefault();
@@ -20,7 +20,7 @@ const SignUp = (props) => {
     });
     let validate = await response.json().then((data) => data);
     if (validate === "Error") {
-      setMessage(true);
+      setMessage(2);
     } else {
       auth.signIn(() => {
         props.history.push("/home");

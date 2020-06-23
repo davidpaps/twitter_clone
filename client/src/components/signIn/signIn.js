@@ -6,7 +6,7 @@ import Prompt from "../prompt";
 const SignIn = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState(false);
+  const [message, setMessage] = useState(0);
 
   const onSubmitForm = async (event) => {
     event.preventDefault();
@@ -22,7 +22,7 @@ const SignIn = (props) => {
       ? auth.signIn(() => {
           props.history.push("/home");
         })
-      : setMessage(true);
+      : setMessage(1);
   };
   return (
     <Fragment>
