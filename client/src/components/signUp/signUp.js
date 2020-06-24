@@ -25,6 +25,7 @@ const SignUp = (props) => {
       auth.signIn(() => {
         props.history.push("/home");
       });
+      props.auth(true);
     }
   };
 
