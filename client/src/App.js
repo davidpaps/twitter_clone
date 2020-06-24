@@ -28,10 +28,18 @@ const App = () => {
                 path="/sign_in"
                 render={(props) => <SignIn {...props} auth={setAuth} />}
               />
-              <Route exact path="/sign_up" component={SignUp} />
-              <Route exact path="/sign_out" component={SignOut} />
+              <Route
+                exact
+                path="/sign_up"
+                render={(props) => <SignUp {...props} auth={setAuth} />}
+              />
+              <Route exact path="/sign_out">
+                <SignOut />
+              </Route>
               <PrivateRoute exact path="/home" component={Twitter} />
-              <Route component={Error} />
+              <Route>
+                <Error />
+              </Route>
             </Switch>
           </ul>
         </div>
