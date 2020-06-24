@@ -20,11 +20,13 @@ const App = () => {
         <div className="container">
           <ul>
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/">
+                <Home />
+              </Route>
               <Route
+                exact
                 path="/sign_in"
                 render={(props) => <SignIn {...props} auth={setAuth} />}
-                exact
               />
               <Route exact path="/sign_up" component={SignUp} />
               <Route exact path="/sign_out" component={SignOut} />
