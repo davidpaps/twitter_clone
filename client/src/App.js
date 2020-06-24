@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import SignIn from "./components/signIn/signIn";
@@ -9,9 +9,10 @@ import Error from "./components/error/error";
 import Home from "./components/home/home";
 import SignOut from "./components/signOut/signOut";
 import PrivateRoute from "./components/privateRoute";
-import auth from "./components/auth";
 
 const App = () => {
+  const [auth, setAuth] = useState(false);
+
   return (
     <Fragment>
       <Router>

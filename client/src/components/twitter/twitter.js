@@ -10,17 +10,20 @@ const Twitter = (props) => {
       <div className="container">
         <AddTweet />
         <ListTweets />
+        {console.log("TWITTER", auth.isAuthenticated())}
       </div>
-      <button
-        onClick={() => {
-          auth.signOut(() => {
-            props.history.push("/");
-          });
-        }}
-        className="btn btn-outline-warning btn-sm mr-xl-5 w-100 h-100"
-      >
-        De-Authenticate
-      </button>
+      {auth.isAuthenticated() && (
+        <button
+          onClick={() => {
+            auth.signOut(() => {
+              props.history.push("/");
+            });
+          }}
+          className="btn btn-outline-warning btn-sm mr-xl-5 w-100 h-100"
+        >
+          De-Authenticate
+        </button>
+      )}
     </Fragment>
   );
 };
