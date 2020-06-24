@@ -18,11 +18,14 @@ const SignIn = (props) => {
       body: JSON.stringify(body),
     });
     let validate = await response.json().then((data) => data);
-    validate === true
-      ? auth.signIn(() => {
-          props.history.push("/home");
-        })
-      : setMessage(1);
+    if (validate === true) {
+      auth.signIn(() => {
+        props.history.push("/home");
+      });
+      props.auth(true);
+    } else {
+      setMessage(1);
+    }
   };
   return (
     <Fragment>

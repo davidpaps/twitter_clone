@@ -29,15 +29,6 @@ const Navigation = (props) => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="navbar-collapse collapse"></div>
-          {/* <div>
-              <ul className="nav navbar-nav navbar-right">
-                <li className="nav-item active">
-                  <a className="nav-link" href="/sign_out">
-                    Sign Out
-                  </a>
-                </li>
-              </ul>
-            </div> */}
           <div>
             <ul className="nav navbar-nav">
               <li className="nav-item active">
@@ -47,6 +38,18 @@ const Navigation = (props) => {
               </li>
             </ul>
           </div>
+          {console.log("NAVBAR", props.auth)}
+          {props.auth && (
+            <div>
+              <ul className="nav navbar-nav navbar-right">
+                <li className="nav-item active">
+                  <a className="nav-link" href="/sign_out">
+                    Sign Out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          )}
         </nav>
       </div>
     </Fragment>

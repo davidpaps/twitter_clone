@@ -10,9 +10,8 @@ const Twitter = (props) => {
       <div className="container">
         <AddTweet />
         <ListTweets />
-        {console.log("TWITTER", auth.isAuthenticated())}
       </div>
-      {auth.isAuthenticated() && (
+      {/* {auth.isAuthenticated() && (
         <button
           onClick={() => {
             auth.signOut(() => {
@@ -23,7 +22,7 @@ const Twitter = (props) => {
         >
           De-Authenticate
         </button>
-      )}
+      )} */}
     </Fragment>
   );
 };

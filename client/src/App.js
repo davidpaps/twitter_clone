@@ -16,12 +16,16 @@ const App = () => {
   return (
     <Fragment>
       <Router>
-        <Navigation />
+        <Navigation auth={auth} />
         <div className="container">
           <ul>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/sign_in" component={SignIn} />
+              <Route
+                path="/sign_in"
+                render={(props) => <SignIn {...props} auth={setAuth} />}
+                exact
+              />
               <Route exact path="/sign_up" component={SignUp} />
               <Route exact path="/sign_out" component={SignOut} />
               <PrivateRoute exact path="/home" component={Twitter} />
