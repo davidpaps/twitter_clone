@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import auth from "../auth";
 
 const Navigation = (props) => {
   return (

@@ -8,7 +8,7 @@ import Navigation from "./components/navigation/navigation";
 import Error from "./components/error/error";
 import Home from "./components/home/home";
 import SignOut from "./components/signOut/signOut";
-import PrivateRoute from "./components/privateRoute";
+import PrivateRoute from "./components/privateRoute/privateRoute";
 
 const App = () => {
   const [auth, setAuth] = useState(false);

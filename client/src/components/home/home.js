@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
-const home = (props) => {
+const home = () => {
   return (
     <Fragment>
       <h1 className="text-center mt-5">Welcome to Twitter!</h1>
