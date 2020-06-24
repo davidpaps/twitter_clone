@@ -23,6 +23,7 @@ const SignIn = (props) => {
         props.history.push("/home");
       });
       props.auth(true);
+      props.username(username);
     } else {
       setMessage(1);
     }

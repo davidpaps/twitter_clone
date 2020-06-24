@@ -26,6 +26,7 @@ const SignUp = (props) => {
         props.history.push("/home");
       });
       props.auth(true);
+      props.username(username);
     }
   };
 

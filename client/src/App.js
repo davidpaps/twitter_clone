@@ -12,6 +12,7 @@ import PrivateRoute from "./components/privateRoute";
 
 const App = () => {
   const [auth, setAuth] = useState(false);
+  const [username, setUsername] = useState("");
 
   return (
     <Fragment>
@@ -26,17 +27,26 @@ const App = () => {
               <Route
                 exact
                 path="/sign_in"
-                render={(props) => <SignIn {...props} auth={setAuth} />}
+                render={(props) => (
+                  <SignIn {...props} auth={setAuth} username={setUsername} />
+                )}
               />
               <Route
                 exact
                 path="/sign_up"
-                render={(props) => <SignUp {...props} auth={setAuth} />}
+                render={(props) => (
+                  <SignUp {...props} auth={setAuth} username={setUsername} />
+                )}
               />
               <Route exact path="/sign_out">
                 <SignOut />
               </Route>
-              <PrivateRoute exact path="/home" component={Twitter} />
+              <PrivateRoute
+                exact
+                path="/home"
+                component={Twitter}
+                username={username}
+              />
               <Route>
                 <Error />
               </Route>

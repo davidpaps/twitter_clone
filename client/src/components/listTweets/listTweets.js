@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import EditTweet from "../editTweet/editTweet";
 
-const ListTweets = () => {
+const ListTweets = (props) => {
   const [tweets, setTweets] = useState([]);
 
   const deleteTweets = async (id) => {
@@ -28,7 +28,7 @@ const ListTweets = () => {
       {tweets.map((tweet) => (
         <div className="card" key={tweet.tweet_id}>
           <div className="card-body">
-            <h4 className="card-title">Tweet Number {tweet.tweet_id}</h4>
+            <h4 className="card-title">{props.username}</h4>
             <p className="card-text">{tweet.description}</p>
             <EditTweet tweet={tweet} />
             <button
