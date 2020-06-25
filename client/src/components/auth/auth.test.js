@@ -1,8 +1,7 @@
-import React from "react";
 import Auth from "./auth";
 
 describe("Auth", () => {
-  it("", () => {
+  it("Has a starting default of false", () => {
     expect(Auth.isAuthenticated()).toEqual(false);
   });
 });

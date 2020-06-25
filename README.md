@@ -88,12 +88,12 @@ This will start up the Frontend, React interface. A tab on your browser will ope
 
 ## Testing
 
-To run the testing suite, open up the terminal and type in:
+To run the testing suite, navigaue to either the [server](server) or [client](client) directories. Then in the command line type:
 
 ```
 npm test
 ```
 
-This will start the Jest/Enzyme testing libraries and display all 29 passing tests, with 100% coverage.
+This will start the Jest/Enzyme testing libraries and display 44 passing tests for the `client` and 8 passing tests for the `server`, with 100% coverage.
 
 ---
