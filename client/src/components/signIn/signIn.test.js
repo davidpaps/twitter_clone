@@ -24,6 +24,6 @@ describe("Sign In", () => {
   });
 
   it("should render a <Link />", () => {
-    expect(wrapper.find("Link").length).toEqual(2);
+    expect(wrapper.find("Link").length).toEqual(1);
   });
 });

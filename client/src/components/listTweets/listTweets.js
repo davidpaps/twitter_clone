@@ -20,10 +20,12 @@ const ListTweets = (props) => {
 
   useEffect(() => {
     getTweets();
-  }, [tweets]);
+  }, [tweets.tweet_id, tweets.description, tweets.user_fk_id]);
 
   return (
     <Fragment>
+      {console.log(tweets)}
+      {console.log(props.users)}
       <h1 className="text-center mt-5"> Tweets:</h1>
       {tweets.map((tweet) => (
         <div className="card" key={tweet.tweet_id}>

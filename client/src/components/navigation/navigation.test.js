@@ -12,7 +12,7 @@ describe("Navigation", () => {
   });
 
   it("should render a <div />", () => {
-    expect(wrapper.find("div").length).toEqual(2);
+    expect(wrapper.find("div").length).toEqual(3);
   });
 
   it("should render a <button />", () => {
@@ -20,10 +20,10 @@ describe("Navigation", () => {
   });
 
   it("should render a <ul />", () => {
-    expect(wrapper.find("ul").length).toEqual(2);
+    expect(wrapper.find("ul").length).toEqual(1);
   });
 
   it("should render a <li />", () => {
-    expect(wrapper.find("li").length).toEqual(4);
+    expect(wrapper.find("li").length).toEqual(1);
   });
 });
