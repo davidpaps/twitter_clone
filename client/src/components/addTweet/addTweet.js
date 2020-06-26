@@ -4,7 +4,6 @@ const AddTweet = (props) => {
   const [description, setDescription] = useState("");
 
   const getUserId = () => {
-    console.log(props.users);
     return props.users.filter((user) => user.username === props.username)[0]
       .user_id;
   };
