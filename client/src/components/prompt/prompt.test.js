@@ -7,10 +7,6 @@ describe("Prompt", () => {
 
   beforeEach(() => (wrapper = shallow(<Prompt />)));
 
-  it("should render a <div />", () => {
-    expect(wrapper.find("div").length).toEqual(2);
-  });
-
   it("should render a <Fragment />", () => {
     expect(wrapper.find("Fragment").length).toEqual(1);
   });

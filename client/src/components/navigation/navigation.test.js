@@ -15,10 +15,6 @@ describe("Navigation", () => {
     expect(wrapper.find("div").length).toEqual(3);
   });
 
-  it("should render a <button />", () => {
-    expect(wrapper.find("button").length).toEqual(1);
-  });
-
   it("should render a <ul />", () => {
     expect(wrapper.find("ul").length).toEqual(1);
   });
