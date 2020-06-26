@@ -23,7 +23,7 @@ const EditTweet = (props) => {
       <button
         type="button"
         className="btn btn-outline-warning btn-sm"
-        data-toggle="modal"
+        data-toggle={props.userId === props.tweet.user_fk_id ? "modal" : null}
         data-target={`#id${props.tweet.tweet_id}`}
       >
         Edit

@@ -48,7 +48,11 @@ const ListTweets = (props) => {
               }
             </h4>
             <p className="card-text">{tweet.description}</p>
-            <EditTweet tweet={tweet} setRender={props.setRender} />
+            <EditTweet
+              tweet={tweet}
+              setRender={props.setRender}
+              userId={props.userId}
+            />
             <button
               className="btn btn-outline-danger btn-sm m-1"
               onClick={() => deleteTweets(tweet.tweet_id, tweet.user_fk_id)}
