@@ -17,15 +17,19 @@ const Twitter = (props) => {
   }, []);
 
   return (
-    <Fragment>
-      <h1 className="text-center mt-5">
-        {props.username}, Welcome Back to Twitter!
-      </h1>
-      <div className="container">
-        <AddTweet />
-        <ListTweets username={props.username} users={users} />
-      </div>
-    </Fragment>
+    <div>
+      {users && (
+        <Fragment>
+          <h1 className="text-center mt-5">
+            {props.username}, Welcome Back to Twitter!
+          </h1>
+          <div className="container">
+            <AddTweet users={users} username={props.username} />
+            <ListTweets username={props.username} users={users} />
+          </div>
+        </Fragment>
+      )}
+    </div>
   );
 };
 
