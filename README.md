@@ -94,6 +94,36 @@ To run the testing suite, navigaue to either the [server](server) or [client](cl
 npm test
 ```
 
-This will start the Jest/Enzyme testing libraries and display 44 passing tests for the `client` and 8 passing tests for the `server`, with 100% coverage.
+This will start the Jest/Enzyme testing libraries and display 39 passing tests for the `client` and 8 passing tests for the `server`, with 100% coverage.
+
+---
+
+<table>
+   <tr>
+      <td>Welcome Page</td>
+      <td>Sign In</td>
+      <td>Sign Up</td>
+  
+   </tr>
+   <tr>
+   <td valign="top"><img src='./client/public/images/homescreen.png' width="3000"/></td>
+   <td valign="top"><img src='./client/public/images/sign_in.png' width="3000"/></td>
+   <td valign="top"><img src='./client/public/images/sign_up.png' width="3000"/></td>
+   </tr>
+  </table>
+
+  <table>
+   <tr>
+      <td>Tweets</td>
+        <td>Edit Tweet</td>
+       <td>Sign Out</td>
+  
+   </tr>
+   <tr>
+   <td valign="top"><img src='./client/public/images/tweets.png' width="3000"/></td>
+   <td valign="top"><img src='./client/public/images/edit_tweet.png' width="3000"/></td>
+   <td valign="top"><img src='./client/public/images/sign_out.png' width="3000"/></td>
+   </tr>
+  </table>
 
 ---
