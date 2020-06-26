@@ -13,6 +13,10 @@ const Twitter = (props) => {
     setUsers(jsonData.reverse());
   };
 
+  const getUserId = () => {
+    return users.filter((user) => user.username === props.username)[0].user_id;
+  };
+
   useEffect(() => {
     getUsers();
   }, []);
@@ -30,12 +34,14 @@ const Twitter = (props) => {
               username={props.username}
               auth={props.auth}
               setRender={setRender}
+              userId={getUserId()}
             />
             <ListTweets
               username={props.username}
               users={users}
               render={render}
               setRender={setRender}
+              userId={getUserId()}
             />
           </div>
         </Fragment>

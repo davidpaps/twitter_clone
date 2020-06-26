@@ -32,7 +32,7 @@ const Navigation = (props) => {
               <ul className="nav navbar-nav navbar-right">
                 <li className="nav-item active">
                   <a className="nav-link" href="/home">
-                    Home <span className="sr-only">(current)</span>
+                    Sign In <span className="sr-only">(current)</span>
                   </a>
                 </li>
               </ul>
