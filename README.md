@@ -1,8 +1,17 @@
 # Twitter - Built with the PERN Stack
 
-A Full Stack PERN Application (PostgreSQL, Express, React, Node) that explores RESTful API's in a CRUD (Create, Read, Update, Delete) App that users can sign up, sign in and make, edit and delete posts.
+A Full Stack PERN Application that explores RESTful API's in a CRUD (Create, Read, Update, Delete) App that users can sign up, sign in and make, edit and delete posts.
 
-This simulates Twitter and stores all 'Tweets' in the attached database. It was Test driven using the Jest and Enzyme libraries.
+This application explores the PERN (PostgreSQL, Express, React, Node) full stack in greater detail. It uses a Node.js/Express.js to create a RESTful API's in the backend with an attached PostgreSQL database for storgae of the users and tweets. React.js was then used for the Single Page frontend server. This will dynamically render whenever a tweet is created, edited or deleted - it will then update and retrieve data from the database accordingly. The project wasTest driven using the Jest and Enzyme libraries.
+
+### Features
+
+- A user can sign up to Twitter (with unique credentials - duplicate username or email addresses will throw an error message)
+- A user can sign in to their twitter account (references the database and throws an error message if no user exists)
+- A user can sign out which will de-authenticate the session
+- You can only view the '/' path until you sign in/up - otherwise it will always reroute to the same page
+- Once logged in, a user can post a tweet, then edit or delete a tweet that they made
+- A user can not delete or edit a tweet that does not belong to them
 
 ---
 
@@ -22,12 +31,6 @@ I want to see all tweets in reverse chronological order
 
 ```
 As a user
-So that I can better appreciate the context of a peep
-I want to see the time at which it was made
-```
-
-```
-As a user
 So that I can post messages on Twitter as me
 I want to sign up for Twitter
 ```
@@ -42,6 +45,12 @@ I want to log in to Twitter
 As a user
 So that I can avoid others posting messages on Twitter as me
 I want to log out of Twitter
+```
+
+```
+As a user
+So that I can keep my tweets safe
+I want to be the only person who can edit or delete my tweets
 ```
 
 ---
