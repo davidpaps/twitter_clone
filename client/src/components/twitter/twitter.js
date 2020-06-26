@@ -4,12 +4,13 @@ import ListTweets from "../listTweets/listTweets";
 
 const Twitter = (props) => {
   const [users, setUsers] = useState("");
+  const [render, setRender] = useState(false);
 
   const getUsers = async () => {
     const response = await fetch("http://localhost:5000/users");
     const jsonData = await response.json();
 
-    setUsers(jsonData);
+    setUsers(jsonData.reverse());
   };
 
   useEffect(() => {
@@ -24,8 +25,18 @@ const Twitter = (props) => {
             {props.username}, Welcome Back to Twitter!
           </h1>
           <div className="container">
-            <AddTweet users={users} username={props.username} />
-            <ListTweets username={props.username} users={users} />
+            <AddTweet
+              users={users}
+              username={props.username}
+              auth={props.auth}
+              setRender={setRender}
+            />
+            <ListTweets
+              username={props.username}
+              users={users}
+              render={render}
+              setRender={setRender}
+            />
           </div>
         </Fragment>
       )}

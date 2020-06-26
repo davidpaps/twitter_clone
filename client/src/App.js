@@ -46,6 +46,8 @@ const App = () => {
                 path="/home"
                 component={Twitter}
                 username={username}
+                auth={auth}
+                setAuth={setAuth}
               />
               <Route>
                 <Error />

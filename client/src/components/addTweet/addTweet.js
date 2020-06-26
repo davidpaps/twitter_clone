@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 
 const AddTweet = (props) => {
   const [description, setDescription] = useState("");
+  const [userId, setUserId] = useState("");
 
   const getUserId = () => {
     return props.users.filter((user) => user.username === props.username)[0]
@@ -20,6 +21,7 @@ const AddTweet = (props) => {
       }
     );
     setDescription("");
+    props.setRender(true);
   };
 
   return (

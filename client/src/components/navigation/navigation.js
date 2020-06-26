@@ -16,6 +16,7 @@ const Navigation = (props) => {
             />
             Twitter
           </a>
+          <div className="navbar-collapse collapse"></div>
           {props.auth ? (
             <div>
               <ul className="nav navbar-nav navbar-right">
@@ -28,7 +29,7 @@ const Navigation = (props) => {
             </div>
           ) : (
             <div>
-              <ul className="nav navbar-nav">
+              <ul className="nav navbar-nav navbar-right">
                 <li className="nav-item active">
                   <a className="nav-link" href="/home">
                     Home <span className="sr-only">(current)</span>

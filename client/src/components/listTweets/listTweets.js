@@ -15,20 +15,27 @@ const ListTweets = (props) => {
     const response = await fetch("http://localhost:5000/tweets");
     const jsonData = await response.json();
 
-    setTweets(jsonData);
+    setTweets(jsonData.reverse());
+    props.setRender(false);
   };
 
   useEffect(() => {
     getTweets();
-  }, [tweets]);
+  }, [props.render]);
 
   return (
     <Fragment>
       <h1 className="text-center mt-5"> Tweets:</h1>
-      {tweets.map((tweet) => (
+      {tweets.reverse().map((tweet) => (
         <div className="card" key={tweet.tweet_id}>
           <div className="card-body">
-            <h4 className="card-title">{props.username}</h4>
+            <h4 className="card-title">
+              {
+                props.users.filter(
+                  (user) => user.user_id === tweet.user_fk_id
+                )[0].username
+              }
+            </h4>
             <p className="card-text">{tweet.description}</p>
             <EditTweet tweet={tweet} />
             <button
