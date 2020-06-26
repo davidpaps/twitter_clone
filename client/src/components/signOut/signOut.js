@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
-const SignOut = (props) => {
+const SignOut = () => {
   return (
     <Fragment>
       <div>

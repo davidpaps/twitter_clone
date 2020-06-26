@@ -1,8 +1,10 @@
 import React, { Fragment, useEffect, useState } from "react";
 import EditTweet from "../editTweet/editTweet";
+import Prompt from "../prompt/prompt";
 
 const ListTweets = (props) => {
   const [tweets, setTweets] = useState([]);
+  const [message, setMessage] = useState(0);
 
   const deleteTweets = async (tweet_id, tweet_user_id) => {
     if (props.userId === tweet_user_id) {
@@ -14,7 +16,7 @@ const ListTweets = (props) => {
       );
       setTweets(tweets.filter((tweet) => tweet.tweet_id !== tweet_id));
     } else {
-      console.log("whoops");
+      setMessage(3);
     }
   };
 
@@ -24,6 +26,7 @@ const ListTweets = (props) => {
 
     setTweets(jsonData.reverse());
     props.setRender(false);
+    setMessage(0);
   };
 
   useEffect(() => {
@@ -32,6 +35,7 @@ const ListTweets = (props) => {
 
   return (
     <Fragment>
+      <Prompt message={message} />
       <h1 className="text-center mt-5"> Tweets:</h1>
       {tweets.reverse().map((tweet) => (
         <div className="card" key={tweet.tweet_id}>
