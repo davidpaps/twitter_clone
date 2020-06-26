@@ -27,7 +27,15 @@ const Navigation = (props) => {
               <ul className="nav navbar-nav navbar-right">
                 <li className="nav-item active">
                   <a className="nav-link" href="/sign_out">
-                    Sign Out
+                    Sign Out <span className="sr-only">(current)</span>
+                    <img
+                      src="https://cdn.iconscout.com/icon/premium/png-256-thumb/entry-20-291900.png"
+                      width="22"
+                      height="22"
+                      className="d-inline-block "
+                      alt=""
+                      loading="lazy"
+                    />
                   </a>
                 </li>
               </ul>
@@ -39,9 +47,9 @@ const Navigation = (props) => {
                   <a className="nav-link" href="/sign_up">
                     Sign In <span className="sr-only">(current)</span>
                     <img
-                      src="https://static.thenounproject.com/png/344461-200.png"
-                      width="22"
-                      height="22"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTg9NgXjYkbVD1Wb4LzGSv9nYR6bC3Z_B4qWw&usqp=CAU"
+                      width="20"
+                      height="20"
                       className="d-inline-block "
                       alt=""
                       loading="lazy"
@@ -53,9 +61,9 @@ const Navigation = (props) => {
                   <a className="nav-link" href="/sign_in">
                     Sign Up <span className="sr-only">(current)</span>
                     <img
-                      src="https://previews.123rf.com/images/azvector/azvector1803/azvector180300411/97269455-login-icon-authorize-icon-log-in-sign-login-icon-open-account-symbol-register-new-user-vector-icon.jpg"
-                      width="34"
-                      height="34"
+                      src="https://cdn3.iconfinder.com/data/icons/user-interface-2-9/34/169-512.png"
+                      width="20"
+                      height="20"
                       className="d-inline-block"
                       alt=""
                       loading="lazy"

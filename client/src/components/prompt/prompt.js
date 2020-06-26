@@ -17,7 +17,7 @@ const Prompt = (props) => {
 
       {props.message === 3 && (
         <div className="container text-center mt-5">
-          <h4>Error - You Can not Delete Posts That do not Belong to You!</h4>
+          <h4>Error - You Can not Delete/Edit Posts From Other Users!</h4>
         </div>
       )}
     </Fragment>
