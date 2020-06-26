@@ -17,6 +17,11 @@ const Navigation = (props) => {
             Twitter
           </a>
           <div className="navbar-collapse collapse"></div>
+          <div>
+            <ul className="nav navbar-nav navbar-center">
+              <li>{props.username}</li>
+            </ul>
+          </div>
           {props.auth ? (
             <div>
               <ul className="nav navbar-nav navbar-right">
@@ -31,8 +36,30 @@ const Navigation = (props) => {
             <div>
               <ul className="nav navbar-nav navbar-right">
                 <li className="nav-item active">
-                  <a className="nav-link" href="/home">
+                  <a className="nav-link" href="/sign_up">
                     Sign In <span className="sr-only">(current)</span>
+                    <img
+                      src="https://static.thenounproject.com/png/344461-200.png"
+                      width="22"
+                      height="22"
+                      className="d-inline-block "
+                      alt=""
+                      loading="lazy"
+                    />
+                  </a>
+                </li>
+
+                <li className="nav-item active">
+                  <a className="nav-link" href="/sign_in">
+                    Sign Up <span className="sr-only">(current)</span>
+                    <img
+                      src="https://previews.123rf.com/images/azvector/azvector1803/azvector180300411/97269455-login-icon-authorize-icon-log-in-sign-login-icon-open-account-symbol-register-new-user-vector-icon.jpg"
+                      width="34"
+                      height="34"
+                      className="d-inline-block"
+                      alt=""
+                      loading="lazy"
+                    />
                   </a>
                 </li>
               </ul>

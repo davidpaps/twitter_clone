@@ -32,7 +32,7 @@ const SignUp = (props) => {
 
   return (
     <Fragment>
-      <h1 className="text-center mt-5">Twitter Sign Up</h1>
+      <h1 className="text-center mt-5">Sign Up to Twitter!</h1>
       <form className="d-flex mt-5" onSubmit={onSubmitForm}>
         <input
           className="form-control"

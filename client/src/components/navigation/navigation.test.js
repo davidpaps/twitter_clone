@@ -12,14 +12,14 @@ describe("Navigation", () => {
   });
 
   it("should render a <div />", () => {
-    expect(wrapper.find("div").length).toEqual(3);
+    expect(wrapper.find("div").length).toEqual(4);
   });
 
   it("should render a <ul />", () => {
-    expect(wrapper.find("ul").length).toEqual(1);
+    expect(wrapper.find("ul").length).toEqual(2);
   });
 
   it("should render a <li />", () => {
-    expect(wrapper.find("li").length).toEqual(1);
+    expect(wrapper.find("li").length).toEqual(3);
   });
 });

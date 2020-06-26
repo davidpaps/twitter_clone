@@ -25,9 +25,7 @@ const Twitter = (props) => {
     <div>
       {users && (
         <Fragment>
-          <h1 className="text-center mt-5">
-            {props.username}, Welcome Back to Twitter!
-          </h1>
+          <h1 className="text-center mt-5">Welcome to Twitter!</h1>
           <div className="container">
             <AddTweet
               users={users}

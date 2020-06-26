@@ -17,7 +17,7 @@ const App = () => {
   return (
     <Fragment>
       <Router>
-        <Navigation auth={auth} />
+        <Navigation auth={auth} username={username} />
         <div className="container">
           <ul>
             <Switch>

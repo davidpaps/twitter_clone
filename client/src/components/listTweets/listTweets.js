@@ -36,7 +36,7 @@ const ListTweets = (props) => {
   return (
     <Fragment>
       <Prompt message={message} />
-      <h1 className="text-center mt-5"> Tweets:</h1>
+      <h1 className="text-center mt-5"> Your Twitter Feed:</h1>
       {tweets.reverse().map((tweet) => (
         <div className="card" key={tweet.tweet_id}>
           <div className="card-body">
