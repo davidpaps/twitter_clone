@@ -26,11 +26,12 @@ app.get("/tweets/:id", async (req, res) => {
   res.json(tweet.rows[0]);
 });
 
-app.post("/tweets", async (req, res) => {
+app.post("/tweets/:id", async (req, res) => {
+  const { id } = req.params;
   const { description } = req.body;
   const newTweet = await pool.query(
-    "INSERT INTO tweets (description) VALUES($1) RETURNING *",
-    [description]
+    "INSERT INTO tweets (description, user_fk_id) VALUES($1, $2) RETURNING *",
+    [description, id]
   );
   res.json(newTweet.rows[0]);
 });

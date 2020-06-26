@@ -9,13 +9,20 @@ describe("CRUD Cycle Endpoints", () => {
   });
 
   describe("tweets", () => {
-    afterAll(() => {
-      pool.query("TRUNCATE TABLE tweets;");
+    beforeAll(() => {
+      pool.query(
+        "INSERT INTO users (email, username, password, user_id) VALUES('test@test.com', 'test', 'password', 1) RETURNING *"
+      );
     });
 
-    it("posts a tweet via /tweets", async (done) => {
+    afterAll(() => {
+      pool.query("TRUNCATE TABLE tweets;");
+      pool.query("DELETE FROM users WHERE user_id > 0;");
+    });
+
+    it("posts a tweet via /tweets/:id", async (done) => {
       await request
-        .post("/tweets")
+        .post(`/tweets/1`)
         .send({ description: "test tweet" })
 
         .then((response) => {
