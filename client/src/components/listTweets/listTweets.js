@@ -4,11 +4,18 @@ import EditTweet from "../editTweet/editTweet";
 const ListTweets = (props) => {
   const [tweets, setTweets] = useState([]);
 
-  const deleteTweets = async (id) => {
-    const deleteTweet = await fetch(`http://localhost:5000/tweets/${id}`, {
-      method: "DELETE",
-    });
-    setTweets(tweets.filter((tweet) => tweet.tweet_id !== id));
+  const deleteTweets = async (tweet_id, tweet_user_id) => {
+    if (props.userId === tweet_user_id) {
+      const deleteTweet = await fetch(
+        `http://localhost:5000/tweets/${tweet_id}`,
+        {
+          method: "DELETE",
+        }
+      );
+      setTweets(tweets.filter((tweet) => tweet.tweet_id !== tweet_id));
+    } else {
+      console.log("whoops");
+    }
   };
 
   const getTweets = async () => {
@@ -40,7 +47,7 @@ const ListTweets = (props) => {
             <EditTweet tweet={tweet} setRender={props.setRender} />
             <button
               className="btn btn-outline-danger btn-sm m-1"
-              onClick={() => deleteTweets(tweet.tweet_id)}
+              onClick={() => deleteTweets(tweet.tweet_id, tweet.user_fk_id)}
             >
               Delete
             </button>
