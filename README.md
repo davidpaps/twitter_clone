@@ -103,7 +103,7 @@ To run the testing suite, navigaue to either the [server](server) or [client](cl
 npm test
 ```
 
-This will start the Jest/Enzyme testing libraries and display 39 passing tests for the `client` and 8 passing tests for the `server`, with 100% coverage.
+This will start the Jest/Enzyme testing libraries and display _39_ passing tests for the `client`, _13_ Snapshot tests for the frontend UI, as well as _8_ passing tests for the Restful API `server`, with 100% coverage.
 
 ---
 
