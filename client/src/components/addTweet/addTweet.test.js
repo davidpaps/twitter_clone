@@ -1,6 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import AddTweet from "./addTweet";
+import renderer from "react-test-renderer";
 
 describe("Add Tweet", () => {
   let wrapper;
@@ -24,5 +25,10 @@ describe("Add Tweet", () => {
     expect(wrapper.find("input.form-control").props().value).toBe("");
     wrapper.find("input.form-control").simulate("change", eventObj);
     expect(wrapper.find("input.form-control").props().value).toBe("test tweet");
+  });
+
+  it("should rendercorrectly", () => {
+    const tree = renderer.create(<AddTweet />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

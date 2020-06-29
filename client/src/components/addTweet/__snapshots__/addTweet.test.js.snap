@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Tweet should rendercorrectly 1`] = `
+<form
+  className="d-flex mt-5"
+  onSubmit={[Function]}
+>
+  <input
+    className="form-control"
+    onChange={[Function]}
+    placeholder="Add a Tweet!"
+    required={true}
+    type="text"
+    value=""
+  />
+  <button
+    className="btn btn-outline-success btn-sm"
+  >
+    Add
+  </button>
+</form>
+`;
