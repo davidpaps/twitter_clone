@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should rendercorrectly 1`] = `
+Array [
+  <div>
+    <nav
+      className="navbar navbar-expand-lg navbar-light bg-light"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+      >
+        <img
+          alt=""
+          className="d-inline-block align-top"
+          height="30"
+          loading="lazy"
+          src="https://vignette.wikia.nocookie.net/logopedia/images/9/99/Twitter_2012.svg/revision/latest/scale-to-width-down/340?cb=20180321032720"
+          width="30"
+        />
+        Twitter
+      </a>
+      <div
+        className="navbar-collapse collapse"
+      />
+      <div>
+        <ul
+          className="nav navbar-nav navbar-center"
+        >
+          <li>
+            
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul
+          className="nav navbar-nav navbar-right"
+        >
+          <li
+            className="nav-item active"
+          >
+            <a
+              className="nav-link"
+              href="/sign_up"
+            >
+              Sign In 
+              <span
+                className="sr-only"
+              >
+                (current)
+              </span>
+              <img
+                alt=""
+                className="d-inline-block "
+                height="20"
+                loading="lazy"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTg9NgXjYkbVD1Wb4LzGSv9nYR6bC3Z_B4qWw&usqp=CAU"
+                width="20"
+              />
+            </a>
+          </li>
+          <li
+            className="nav-item active"
+          >
+            <a
+              className="nav-link"
+              href="/sign_in"
+            >
+              Sign Up 
+              <span
+                className="sr-only"
+              >
+                (current)
+              </span>
+              <img
+                alt=""
+                className="d-inline-block"
+                height="20"
+                loading="lazy"
+                src="https://cdn3.iconfinder.com/data/icons/user-interface-2-9/34/169-512.png"
+                width="20"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>,
+  <div
+    className="container"
+  >
+    <ul>
+      <h1
+        className="text-center mt-5"
+      >
+        Welcome to Twitter!
+      </h1>
+      <a
+        href="/sign_up"
+        onClick={[Function]}
+      >
+        <button
+          className="btn btn-outline-success btn-sm mr-xl-5 w-100 h-100"
+        >
+          New User? Create an Account!
+        </button>
+      </a>
+      <br />
+      <br />
+      <a
+        href="/sign_in"
+        onClick={[Function]}
+      >
+        <button
+          className="btn btn-outline-info btn-sm mr-xl-5 w-100 h-100"
+        >
+          Already Have an Account? Click Here to Sign In!
+        </button>
+      </a>
+    </ul>
+  </div>,
+]
+`;

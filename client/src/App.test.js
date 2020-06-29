@@ -2,6 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import App from "./App";
 import Navigation from "./components/navigation/navigation";
+import renderer from "react-test-renderer";
 
 describe("App", () => {
   let wrapper;
@@ -30,5 +31,11 @@ describe("App", () => {
 
   it("should render a <Route />", () => {
     expect(wrapper.find("Route").length).toEqual(5);
+  });
+
+  it("should rendercorrectly", () => {
+    const tree = renderer.create(<App />).toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });
