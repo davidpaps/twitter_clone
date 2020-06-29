@@ -10,4 +10,8 @@ describe("Private Route", () => {
   it("should render a <Route />", () => {
     expect(wrapper.find("Route").length).toEqual(1);
   });
+
+  it("should render correctly", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 });
