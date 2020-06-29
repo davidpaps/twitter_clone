@@ -1,6 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import ListTweets from "./listTweets";
+import renderer from "react-test-renderer";
 
 describe("List Tweet", () => {
   let wrapper;
@@ -9,5 +10,10 @@ describe("List Tweet", () => {
 
   it("should render a <Fragment />", () => {
     expect(wrapper.find("Fragment").length).toEqual(1);
+  });
+
+  it("should render correctly", () => {
+    const tree = renderer.create(<ListTweets />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

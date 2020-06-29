@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Tweet should render correctly 1`] = `
+<h1
+  className="text-center mt-5"
+>
+   Your Twitter Feed:
+</h1>
+`;
