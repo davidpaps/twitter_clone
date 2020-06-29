@@ -26,4 +26,8 @@ describe("Sign Up", () => {
   it("should render a <Link />", () => {
     expect(wrapper.find("Link").length).toEqual(1);
   });
+
+  it("should render correctly", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 });
