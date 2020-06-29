@@ -1,6 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import Navigation from "./navigation";
+import renderer from "react-test-renderer";
 
 describe("Navigation", () => {
   let wrapper;
@@ -21,5 +22,10 @@ describe("Navigation", () => {
 
   it("should render a <li />", () => {
     expect(wrapper.find("li").length).toEqual(3);
+  });
+
+  it("should render correctly", () => {
+    const tree = renderer.create(<Navigation />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
