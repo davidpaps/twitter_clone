@@ -31,6 +31,11 @@ const SignIn = (props) => {
   return (
     <Fragment>
       <h1 className="text-center mt-5">Sign in to Twitter!</h1>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Black_Man_Waving_Hand_Cartoon_Vector.svg/1200px-Black_Man_Waving_Hand_Cartoon_Vector.svg.png"
+        height="50%"
+        width="50%"
+      />
       <form className="d-flex mt-5" onSubmit={onSubmitForm}>
         <input
           className="form-control"
