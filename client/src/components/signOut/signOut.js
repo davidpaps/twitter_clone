@@ -12,11 +12,13 @@ const SignOut = () => {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Black_Man_Walking_Cartoon_Vector.svg/1280px-Black_Man_Walking_Cartoon_Vector.svg.png"
           height="50%"
           width="50%"
+          alt=""
         />
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Man_Walking_Cartoon_Vector.svg/800px-Man_Walking_Cartoon_Vector.svg.png"
           height="50%"
           width="50%"
+          alt=""
         />
       </div>
       <Link to="/sign_in">

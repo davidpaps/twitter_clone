@@ -37,6 +37,7 @@ const SignUp = (props) => {
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Man_Getting_an_Idea_Cartoon_Vector.svg/1200px-Man_Getting_an_Idea_Cartoon_Vector.svg.png"
         height="50%"
         width="50%"
+        alt=""
       />
       <form className="d-flex mt-5" onSubmit={onSubmitForm}>
         <input

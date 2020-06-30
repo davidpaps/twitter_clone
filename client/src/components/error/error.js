@@ -8,6 +8,7 @@ const Error = () => {
         src="https://www.oho.com/sites/default/files/styles/width_1160/public/2020-03/shutterstock_1076235776.jpg?itok=gNVLEOJt"
         width="100%"
         height="100%"
+        alt=""
       />
     </div>
   );
