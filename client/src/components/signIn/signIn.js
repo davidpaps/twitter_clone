@@ -32,7 +32,7 @@ const SignIn = (props) => {
     <Fragment>
       <h1 className="text-center mt-5">Sign in to Twitter!</h1>
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Black_Man_Waving_Hand_Cartoon_Vector.svg/1200px-Black_Man_Waving_Hand_Cartoon_Vector.svg.png"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Black_Man_Getting_an_Idea_Cartoon_Vector.svg/1200px-Black_Man_Getting_an_Idea_Cartoon_Vector.svg.png"
         height="50%"
         width="50%"
       />
