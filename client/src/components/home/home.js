@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 const home = () => {
   return (
     <Fragment>
-      <h1 className="text-center mt-5">Welcome to Twitter!</h1>
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/5b2a905bec4eb77243b05b3c/1531762494480-KPB3OWDFXVL952KXQ8Z6/ke17ZwdGBToddI8pDm48kPipDBN8EsXn0GX4VYEjDvAUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2di_anSEgls28Fx9rC-ls48EcpI-gmYcFCPdUS0knNFfOCjLISwBs8eEdxAxTptZAUg/welcome.PNG"
+        width="100%"
+        height="100%"
+      />
+
       <Link to="/sign_up">
         <button className="btn btn-outline-success btn-sm mr-xl-5 w-100 h-100">
           New User? Create an Account!
