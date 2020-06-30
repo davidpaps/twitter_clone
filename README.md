@@ -2,7 +2,7 @@
 
 A Full Stack PERN Application that explores RESTful API's in a CRUD (Create, Read, Update, Delete) App that users can sign up, sign in and make, edit and delete posts.
 
-This application explores the PERN (PostgreSQL, Express, React, Node) full stack in greater detail. It uses a Node.js/Express.js to create a RESTful API's in the backend with an attached PostgreSQL database for storgae of the users and tweets. React.js was then used for the Single Page frontend server. This will dynamically render whenever a tweet is created, edited or deleted - it will then update and retrieve data from the database accordingly. The project wasTest driven using the Jest and Enzyme libraries.
+This application explores the PERN (PostgreSQL, Express, React, Node) full stack in greater detail. It uses a Node.js/Express.js to create a RESTful API's in the backend with an attached PostgreSQL database for storgae of the users and tweets. React.js was then used for the Single Page frontend server. This will dynamically render whenever a tweet is created, edited or deleted - it will then update and retrieve data from the database accordingly. The project was Test Driven using the Jest and Enzyme libraries.
 
 ### Features
 
@@ -110,28 +110,36 @@ This will start the Jest/Enzyme testing libraries and display _39_ passing tests
 <table>
    <tr>
       <td>Welcome Page</td>
-      <td>Sign In</td>
-      <td>Sign Up</td>
-  
    </tr>
    <tr>
-   <td valign="top"><img src='./client/public/images/homescreen.png' width="3000"/></td>
+   <td valign="top"><img src='./client/public/images/homescreen.png' width="10000"/></td>
+   </tr>
+  </table>
+
+<table>
+   <tr>
+      <td>Sign In</td>
+      <td>Sign Up</td>
+      <td>Tweets</td>
+   </tr>
+   <tr>
    <td valign="top"><img src='./client/public/images/sign_in.png' width="3000"/></td>
    <td valign="top"><img src='./client/public/images/sign_up.png' width="3000"/></td>
+      <td valign="top"><img src='./client/public/images/tweets.png' width="3000"/></td>
    </tr>
   </table>
 
   <table>
    <tr>
-      <td>Tweets</td>
         <td>Edit Tweet</td>
        <td>Sign Out</td>
+         <td>404 Page Not Found</td>
   
    </tr>
    <tr>
-   <td valign="top"><img src='./client/public/images/tweets.png' width="3000"/></td>
-   <td valign="top"><img src='./client/public/images/edit_tweet.png' width="3000"/></td>
+   <td valign="top"><img src='./client/public/images/edit_tweets.png' width="3000"/></td>
    <td valign="top"><img src='./client/public/images/sign_out.png' width="3000"/></td>
+      <td valign="top"><img src='./client/public/images/404.png' width="3000"/></td>
    </tr>
   </table>
 
