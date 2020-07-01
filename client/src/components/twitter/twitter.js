@@ -23,38 +23,48 @@ const Twitter = (props) => {
   }, []);
 
   return (
-    <div className={classes.Twitter}>
-      <img
-        src="https://webstockreview.net/images/lightbulb-clipart-self-realization-7.gif"
-        alt=""
-      />
+    <Fragment>
+      <div className={classes.Title}>
+        HELLO
+        <img
+          src="https://blogs.loc.gov/loc/files/2010/04/twitter_logo.jpg"
+          alt=""
+        ></img>
+      </div>
 
-      {users && (
-        <div>
-          <div className={classes.title}>
-            <br></br>
-          </div>
+      <div className={classes.Twitter}>
+        <img
+          src="https://webstockreview.net/images/lightbulb-clipart-self-realization-7.gif"
+          alt=""
+        />
 
+        {users && (
           <div>
-            <AddTweet
-              users={users}
-              username={props.username}
-              auth={props.auth}
-              setRender={setRender}
-              userId={getUserId()}
-            />
-            <br></br>
-            <ListTweets
-              username={props.username}
-              users={users}
-              render={render}
-              setRender={setRender}
-              userId={getUserId()}
-            />
+            <div>
+              <br></br>
+            </div>
+
+            <div>
+              <AddTweet
+                users={users}
+                username={props.username}
+                auth={props.auth}
+                setRender={setRender}
+                userId={getUserId()}
+              />
+              <br></br>
+              <ListTweets
+                username={props.username}
+                users={users}
+                render={render}
+                setRender={setRender}
+                userId={getUserId()}
+              />
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </Fragment>
   );
 };
 
