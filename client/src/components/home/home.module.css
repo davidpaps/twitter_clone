@@ -1,0 +1,14 @@
+.Home {
+  background-color: #f8f9fa;
+}
+
+.Home img {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+}
