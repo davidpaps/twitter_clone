@@ -33,7 +33,7 @@ const SignIn = (props) => {
     <div className={classes.SignIn}>
       <h1 className="text-center mt-5">Sign in to Twitter!</h1>
       <img
-        src="https://webstockreview.net/images/lightbulb-clipart-self-realization-7.gif"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Black_Man_Getting_an_Idea_Cartoon_Vector.svg/1200px-Black_Man_Getting_an_Idea_Cartoon_Vector.svg.png"
         alt=""
       />
       <form className="d-flex mt-5" onSubmit={onSubmitForm}>

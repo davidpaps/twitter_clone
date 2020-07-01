@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import EditTweet from "./editTweet/editTweet";
 import Prompt from "../../prompt/prompt";
+import classes from "./listTweets.module.css";
 
 const ListTweets = (props) => {
   const [tweets, setTweets] = useState([]);
@@ -34,9 +35,9 @@ const ListTweets = (props) => {
   }, [props.render]);
 
   return (
-    <Fragment>
+    <div className={classes.ListTweets}>
       <Prompt message={message} />
-      <h1 className="text-center mt-5"> Your Twitter Feed:</h1>
+      <h1 className="text-center mt-5"> {props.username}'s Twitter Feed:</h1>
       {tweets.reverse().map((tweet) => (
         <div className="card" key={tweet.tweet_id}>
           <div className="card-body">
@@ -62,7 +63,7 @@ const ListTweets = (props) => {
           </div>
         </div>
       ))}
-    </Fragment>
+    </div>
   );
 };
 

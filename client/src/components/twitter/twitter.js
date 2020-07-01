@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import AddTweet from "./addTweet/addTweet";
 import ListTweets from "./listTweets/listTweets";
+import classes from "./twitter.module.css";
 
 const Twitter = (props) => {
   const [users, setUsers] = useState("");
@@ -22,11 +23,19 @@ const Twitter = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className={classes.Twitter}>
+      <img
+        src="https://webstockreview.net/images/lightbulb-clipart-self-realization-7.gif"
+        alt=""
+      />
+
       {users && (
-        <Fragment>
-          <h1 className="text-center mt-5">Welcome to Twitter!</h1>
-          <div className="container">
+        <div>
+          <div className={classes.title}>
+            <br></br>
+          </div>
+
+          <div>
             <AddTweet
               users={users}
               username={props.username}
@@ -34,6 +43,7 @@ const Twitter = (props) => {
               setRender={setRender}
               userId={getUserId()}
             />
+            <br></br>
             <ListTweets
               username={props.username}
               users={users}
@@ -42,7 +52,7 @@ const Twitter = (props) => {
               userId={getUserId()}
             />
           </div>
-        </Fragment>
+        </div>
       )}
     </div>
   );
