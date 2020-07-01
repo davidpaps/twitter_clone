@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
+import classes from "./navigation.module.css";
 
 const Navigation = (props) => {
   return (
     <Fragment>
-      <div>
+      <div className={classes.Navigation}>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="/">
             <img

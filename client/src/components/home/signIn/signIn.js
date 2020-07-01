@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import auth from "../../auth/auth";
 import Prompt from "../../prompt/prompt";
+import classes from "./signIn.module.css";
 
 const SignIn = (props) => {
   const [username, setUsername] = useState("");
@@ -29,12 +30,10 @@ const SignIn = (props) => {
     }
   };
   return (
-    <Fragment>
+    <div className={classes.SignIn}>
       <h1 className="text-center mt-5">Sign in to Twitter!</h1>
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Black_Man_Getting_an_Idea_Cartoon_Vector.svg/1200px-Black_Man_Getting_an_Idea_Cartoon_Vector.svg.png"
-        height="50%"
-        width="50%"
+        src="https://webstockreview.net/images/lightbulb-clipart-self-realization-7.gif"
         alt=""
       />
       <form className="d-flex mt-5" onSubmit={onSubmitForm}>
@@ -65,7 +64,7 @@ const SignIn = (props) => {
         </button>
       </Link>
       <Prompt message={message} />
-    </Fragment>
+    </div>
   );
 };
 

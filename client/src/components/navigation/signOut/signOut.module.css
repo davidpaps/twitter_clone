@@ -1,10 +1,10 @@
-.SignUp {
+.SignOut {
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.SignUp img {
-  max-width: 70%;
+.SignOut img {
+  max-width: 60%;
   height: auto;
   display: block;
   margin-left: auto;
