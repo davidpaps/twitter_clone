@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import auth from "../../auth/auth";
 import Prompt from "../../prompt/prompt";
+import classes from "./signUp.module.css";
 
 const SignUp = (props) => {
   const [email, setEmail] = useState("");
@@ -31,7 +32,7 @@ const SignUp = (props) => {
   };
 
   return (
-    <Fragment>
+    <div className={classes.SignUp}>
       <h1 className="text-center mt-5">Sign Up to Twitter!</h1>
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Man_Getting_an_Idea_Cartoon_Vector.svg/1200px-Man_Getting_an_Idea_Cartoon_Vector.svg.png"
@@ -75,7 +76,7 @@ const SignUp = (props) => {
         </button>
       </Link>
       <Prompt message={message} />
-    </Fragment>
+    </div>
   );
 };
 
