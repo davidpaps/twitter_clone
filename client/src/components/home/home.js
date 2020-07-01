@@ -23,24 +23,18 @@ const home = () => {
         </button>
       </Link>
       <img
-        className={classes.Home}
+        className={classes.side}
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Black_Man_Playing_Guitar_Standing_Cartoon_Vector.svg/1280px-Black_Man_Playing_Guitar_Standing_Cartoon_Vector.svg.png"
-        width="33%"
-        height="30%"
         alt=""
       />
       <img
-        className={classes.Home}
+        className={classes.side}
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Woman_In_Blue_Holding_Nothing_Cartoon.svg/1280px-Woman_In_Blue_Holding_Nothing_Cartoon.svg.png"
-        width="33%"
-        height="30%"
         alt=""
       />
       <img
-        className={classes.Home}
+        className={classes.side}
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Man_Looking_at_Phone_Cartoon_Vector.svg/1024px-Man_Looking_at_Phone_Cartoon_Vector.svg.png"
-        width="33%"
-        height="30%"
         alt=""
       />
     </div>

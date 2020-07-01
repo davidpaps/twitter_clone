@@ -1,5 +1,5 @@
 .Home {
-  background-color: #f8f9fa;
+  background-color: white;
 }
 
 .Home img {
@@ -10,5 +10,8 @@
   margin-right: auto;
 }
 
-.image {
+.side {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
 }
