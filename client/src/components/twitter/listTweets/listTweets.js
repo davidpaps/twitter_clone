@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
-import EditTweet from "../editTweet/editTweet";
-import Prompt from "../prompt/prompt";
+import EditTweet from "./editTweet/editTweet";
+import Prompt from "../../prompt/prompt";
 
 const ListTweets = (props) => {
   const [tweets, setTweets] = useState([]);

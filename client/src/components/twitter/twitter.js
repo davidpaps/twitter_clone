@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
-import AddTweet from "../addTweet/addTweet";
-import ListTweets from "../listTweets/listTweets";
+import AddTweet from "./addTweet/addTweet";
+import ListTweets from "./listTweets/listTweets";
 
 const Twitter = (props) => {
   const [users, setUsers] = useState("");
