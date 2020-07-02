@@ -7,8 +7,12 @@ describe("Sign In", () => {
 
   beforeEach(() => (wrapper = shallow(<SignIn />)));
 
-  it("should render a <Fragment />", () => {
-    expect(wrapper.find("Fragment").length).toEqual(1);
+  it("should render a <div />", () => {
+    expect(wrapper.find("div").length).toEqual(1);
+  });
+
+  it("should render a <img />", () => {
+    expect(wrapper.find("img").length).toEqual(1);
   });
 
   it("should render a <form />", () => {

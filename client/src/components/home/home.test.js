@@ -7,8 +7,12 @@ describe("Home", () => {
 
   beforeEach(() => (wrapper = shallow(<Home />)));
 
-  it("should render a <Fragment />", () => {
-    expect(wrapper.find("Fragment").length).toEqual(1);
+  it("should render a <div />", () => {
+    expect(wrapper.find("div").length).toEqual(1);
+  });
+
+  it("should render a <img />", () => {
+    expect(wrapper.find("img").length).toEqual(4);
   });
 
   it("should render a <button/>", () => {

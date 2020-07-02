@@ -1,7 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home should render correctly 1`] = `
-<div>
-  
-</div>
+exports[`Twitter should render correctly 1`] = `
+Array [
+  <div
+    className="Title"
+  >
+    <img
+      alt=""
+      src="https://mcansozeri.files.wordpress.com/2013/07/twitter_logo.jpg"
+    />
+  </div>,
+  <div
+    className="Twitter"
+  >
+    <img
+      alt=""
+      src="https://webstockreview.net/images/lightbulb-clipart-self-realization-7.gif"
+    />
+    
+  </div>,
+]
 `;
