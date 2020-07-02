@@ -2,7 +2,7 @@
 
 exports[`Error should render correctly 1`] = `
 <div
-  className="container text-center"
+  className="Error"
 >
   <h1
     className="text-center"
@@ -11,9 +11,7 @@ exports[`Error should render correctly 1`] = `
   </h1>
   <img
     alt=""
-    height="100%"
     src="https://www.oho.com/sites/default/files/styles/width_1160/public/2020-03/shutterstock_1076235776.jpg?itok=gNVLEOJt"
-    width="100%"
   />
 </div>
 `;

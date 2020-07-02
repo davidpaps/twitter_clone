@@ -12,6 +12,10 @@ describe("Error", () => {
     expect(wrapper.find("div").length).toEqual(1);
   });
 
+  it("should render a <img />", () => {
+    expect(wrapper.find("img").length).toEqual(1);
+  });
+
   it("should render correctly", () => {
     const tree = renderer.create(<Error />).toJSON();
     expect(tree).toMatchSnapshot();
