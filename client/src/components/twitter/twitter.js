@@ -25,9 +25,8 @@ const Twitter = (props) => {
   return (
     <Fragment>
       <div className={classes.Title}>
-        HELLO
         <img
-          src="https://blogs.loc.gov/loc/files/2010/04/twitter_logo.jpg"
+          src="https://mcansozeri.files.wordpress.com/2013/07/twitter_logo.jpg"
           alt=""
         ></img>
       </div>

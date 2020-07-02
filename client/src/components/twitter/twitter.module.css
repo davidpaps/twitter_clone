@@ -9,12 +9,8 @@
   padding: 5px;
 }
 
-.Title {
-  text-align: center;
-}
-
 .Title img {
-  max-width: 15%;
+  max-width: 20%;
   height: auto;
   display: block;
   margin-left: auto;
