@@ -31,7 +31,7 @@ const SignIn = (props) => {
   };
   return (
     <div className={classes.SignIn}>
-      <h1 className="text-center mt-5">Sign in to Twitter!</h1>
+      <h1 className="text-center mt-5">Sign In to Twitter!</h1>
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Black_Man_Getting_an_Idea_Cartoon_Vector.svg/1200px-Black_Man_Getting_an_Idea_Cartoon_Vector.svg.png"
         alt=""
